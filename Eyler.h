@@ -17,8 +17,4 @@ unsigned long long Problem_1(const unsigned int number_,
 unsigned long long Problem_2(const unsigned int number_);
 
 
-/* 
-* @brief naxojdenie max prost delitela
-* @param number_ : chislo delitel kotorogo ischem
-*/
-unsigned long long Problem_3(const unsigned number_);
+unsigned long long Problem_3(unsigned long long value_);
