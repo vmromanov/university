@@ -1,40 +1,50 @@
 ﻿#include <stdio.h>
-#include "Functions.h"
 #include "Eyler.h"
 #define SIZE 2 
 
-
 int main()
 {
-//   unsigned int number = 0;   eyler 1
-//
-//   printf(" number = ");
-//   scanf_s("%du", &number);
-//
-//   unsigned int multiplies[SIZE];
-//   printf("multipliers = ");
-//   for (unsigned int i = 0; i < SIZE; ++i)
-//      scanf_s("%du", &multiplies[i]);
-//   printf("%llu", Problem_1(number, multiplies, SIZE));
-
-   //unsigned int number = 0;     eyler 2 
+//eyler 1
+   //  {
+   //   unsigned int number = 0;   
+   //   
+   //   printf(" number = ");
+   //   scanf_s("%du", &number);
+   //
+   //   unsigned int multiplies[SIZE];
+   //   printf("multipliers = ");
+   //   for (unsigned int i = 0; i < SIZE; ++i)
+   //      scanf_s("%du", &multiplies[i]);
+	//   printf("%llu", Problem_1(number, multiplies, SIZE));
+//eyler 2
+   //unsigned int number = 0;    
 
    //printf("number =");
    //scanf_s("%du", &number);
    //printf("%llu", Problem_2(number));
 
-	//eyler 3
+//eyler 3
 	/*unsigned*/
 	//long long value_ = 0;
 	//printf("value = ");
 	//scanf_s("%llu", &value_);
 	//printf("answer = %llu \n", Problem_3(value_));
 	//system("pause");  // попытка решить -  "программа завершилась с кодом 0"
+//eyler 4
+	/*int max_palindrome = 0;
+	for (int i = 100; i <= 999; i++)
+	{
+		for (int j = 100; j <= 999; j++)
+			if (IsPalindrome(i * j) && i * j > max_palindrome)
+				max_palindrome = i * j;
+	}
+	printf("maximal palindrom iz trexznachnih chisel = %u\n", max_palindrome);*/
 
-	//eyler 4
-
-	printf("maximal chislo palindrom trexznachnih chisel = %d", Problem_4);
-
+	//eyler 5
+	int num_ = 0;
+printf("delitsa do : ");
+scanf_s("%i", &num_);
+printf("answer = %u\n", DelitbezostDoNum(num_));
    return 0;
 }
 

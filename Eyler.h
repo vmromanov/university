@@ -1,26 +1,40 @@
 #pragma once
-/*
-* @brief найти сумму меньших number_ кратных multiples_
-* @param number_ : число меньше которого ищется сумма
-* @param multiples_ : массив кратных
-* @param size_ : сумма меньших и кратных
-* @return 
+#include <stdbool.h>
+///*
+//* @brief найти сумму меньших number_ кратных multiples_
+//* @param number_ : число меньше которого ищется сумма
+//* @param multiples_ : массив кратных
+//* @param size_ : сумма меньших и кратных
+//* @return 
+//*/
+//unsigned long long Problem_1(const unsigned int number_,
+//   const unsigned int* multiples_,
+//   const unsigned int size_);
+//
+///* @brief найти сумму чисел кратных 2
+//* @param number_ : число меньше которого числа фибаначи
+//*/
+//
+//unsigned long long Problem_2(const unsigned int number_);
+//
+//
+//unsigned long long Problem_3(unsigned long long value_);
+//
+
+
+/* @brief найти наиб полиндром
+*  @param IsPalindrome : проверка на полиндром
+* @param Reverse : переворачивает число
+* @return самый большой палиндром
 */
-unsigned long long Problem_1(const unsigned int number_,
-   const unsigned int* multiples_,
-   const unsigned int size_);
 
-/* @brief найти сумму чисел кратных 2
-* @param number_ : число меньше которого числа фибаначи
+bool IsPalendrome(int number_);
+
+int Reversed(int number_);
+
+
+
+/*@brief поиск числа делящегося на каждое число до н
+* @param num_ до кокого числа делить
 */
-
-unsigned long long Problem_2(const unsigned int number_);
-
-
-unsigned long long Problem_3(unsigned long long value_);
-
-/* @brief поиск самого большого числа-полиндрома из 3х значных чисел
-* @return 
-*/  
-
-unsigned Problem_4();
+int DelitbezostDoNum(const int num_);
