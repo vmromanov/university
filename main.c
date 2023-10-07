@@ -25,11 +25,21 @@ int main()
 
 	//eyler 3
 	/*unsigned*/
-	long long value_ = 0;
-	printf("value = ");
-	scanf_s("%llu", &value_);
-	printf("answer = %llu \n", Problem_3(value_));
-	system("pause");  // попытка решить -  "программа завершилась с кодом 0"
+	//long long value_ = 0;
+	//printf("value = ");
+	//scanf_s("%llu", &value_);
+	//printf("answer = %llu \n", Problem_3(value_));
+	//system("pause");  // попытка решить -  "программа завершилась с кодом 0"
+
+	//eyler 4
+
+	printf("maximal chislo palindrom trexznachnih chisel = %d", Problem_4);
 
    return 0;
 }
+
+
+
+
+
+

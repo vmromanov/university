@@ -132,3 +132,31 @@ unsigned long long Problem_3(const unsigned long long int value_)
     return value;
 }
 
+unsigned Problem_4()
+{
+    {
+        return 0;
+    }
+
+
+    int Number_ = 0;
+    int Reversednum = 0;
+    int MaxNumber = 0;
+    for (int i = 100;; i <= 999; i++)
+    {
+        for (int j = 100; j <= 999; j++)
+        {
+            Number_ = i * j;
+            int save = Number_;
+            while (save)
+            {
+                Reversednum = Reversednum * 10 + zapas % 10;
+                zapas /= 10;
+            }
+            if (Number_ == Reversednum)
+                MaxNumber = Number_;
+        }
+    }
+    return MaxNumber;
+}
+
