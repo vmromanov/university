@@ -38,3 +38,9 @@ int Reversed(int number_);
 * @param num_ до кокого числа делить
 */
 int DelitbezostDoNum(const int num_);
+
+/*@brief erazn mejdu summ kv i kv summi
+* @param amount : kol-vo elementov
+*/
+
+int Raznostmejdukvsummiandcummikv(int amount);

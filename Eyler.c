@@ -1,5 +1,5 @@
 #include "Eyler.h"
-
+#include <math.h>
 //unsigned long long Problem_1(const unsigned int number_,
 //   const unsigned int* multiples_,
 //   const unsigned int size_)
@@ -157,19 +157,40 @@ int Reverse(const int number_)
 
   int DelitbezostDoNum(const int num_)
   {
-      int rez = 0;
-      int count = 0;
-      for (unsigned int number = 20; number <= 2000000000; number += 10)
-      {
-          for (int i = 1; i <= num_; i++)
-              if (number % i == 0)
-              {
-                  count++;
-              }
-          if (count = 20)
+      int rez = 2000000000;  
+          for (unsigned int number = 20; number <= 2000000000/*232792560*/; number += 20)
           {
-              rez = number;
-          }
-      }
+              int count = 0;
+              for (int i = 1; i <= num_; i++)
+                  if (number % i == 0)
+                  {
+                      count++;
+                  }
+              if (count == 20) 
+                  if (rez>number)
+              {
+                  rez = number;
+              }
+          }  
       return rez;
+  }
+
+
+  int Raznostmejdukvsummiandcummikv(int amount)
+  {
+      int summakv = 0;
+      int kvsummi = 0;
+      int summa = 0;
+      int answ = 0;
+      for (int i = 1; i <= amount; i++)
+      {
+          summakv = summakv + i * i;
+      }
+      for (int j = 1; j <= amount;j++)
+      {
+          summa = summa + j;
+      }
+      kvsummi = summa * summa;
+      answ = abs(summakv - kvsummi);
+      return answ;
   }

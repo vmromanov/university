@@ -41,10 +41,21 @@ int main()
 	printf("maximal palindrom iz trexznachnih chisel = %u\n", max_palindrome);*/
 
 	//eyler 5
-	int num_ = 0;
-printf("delitsa do : ");
-scanf_s("%i", &num_);
-printf("answer = %u\n", DelitbezostDoNum(num_));
+
+//	int num_ = 0;
+//printf("delitsa do : ");
+//scanf_s("%i", &num_);
+//printf("answer = %u\n", DelitbezostDoNum(num_));
+
+
+	 //eyler 6 
+	int  amount = 0;
+	printf("amount :\n");
+	scanf_s("%i", &amount);
+	printf("answer = %i\n", Raznostmejdukvsummiandcummikv(amount));
+
+
+
    return 0;
 }
 
