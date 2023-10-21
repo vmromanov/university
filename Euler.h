@@ -17,8 +17,10 @@ unsigned long long Problem_1(const unsigned int number_,
 
 unsigned long long Problem_2(const unsigned int number_);
 
-
-unsigned long long Problem_3(unsigned long long value_);
+/* @brief наибольший простой делитель
+*  @param value_ : число делитель которого нужен
+*/
+unsigned long long Problem_3(const unsigned long long int value_);
 
 
 
@@ -47,3 +49,8 @@ int Problem5(const int num_);
 */
 
 int Problem6(int amount);
+
+
+
+
+

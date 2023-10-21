@@ -5,26 +5,24 @@
 int main()
 {
 //euler 1
-   //  {
-   //   unsigned int number = 0;   
-   //   
-   //   printf(" number = ");
-   //   scanf_s("%du", &number);
-   //
-   //   unsigned int multiplies[SIZE];
-   //   printf("multipliers = ");
-   //   for (unsigned int i = 0; i < SIZE; ++i)
-   //      scanf_s("%du", &multiplies[i]);
-	//   printf("%llu", Problem_1(number, multiplies, SIZE));
+     
+ /*     unsigned int number = 0;   
+      
+      printf(" number = ");
+      scanf_s("%du", &number);
+   
+      unsigned int multiplies[SIZE];
+      printf("multipliers = ");
+      for (unsigned int i = 0; i < SIZE; ++i)
+         scanf_s("%du", &multiplies[i]);
+	   printf("%llu", Problem_1(number, multiplies, SIZE));*/
 //euler 2
    //unsigned int number = 0;    
-
    //printf("number =");
    //scanf_s("%du", &number);
    //printf("%llu", Problem_2(number));
 
-//euler 3
-
+    //euler 3
 	/*unsigned*/
 	/*long long value_ = 0;
 	printf("value = ");
@@ -51,14 +49,14 @@ int main()
 //printf("answer = %u\n", Problem5(num_));
 
 	
-	 //eyler 6 
+	 //euler 6 
 
 	//int  amount = 0;
 	//printf("amount :\n");
 	//scanf_s("%i", &amount);
 	//printf("answer = %i\n", Problem6(amount));
 
-
+	
 
    return 0;
 }

@@ -1,6 +1,6 @@
 #include "Euler.h"
 #include <math.h>
-
+#include "Functions.h"
 
 
 
@@ -108,9 +108,10 @@ int Reversed(const int number_)
                   }
               if (count == 20) 
                   if (rez>number)
-              {
-                  rez = number;
-              }
+                  {
+                   rez = number;
+                   
+                  }
           }  
       return rez;
   }
