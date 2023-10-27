@@ -1,4 +1,4 @@
-#include "Euler.h"
+﻿#include "Euler.h"
 #include <math.h>
 #include "Functions.h"
 
@@ -134,4 +134,30 @@ int Reversed(const int number_)
       kvsummi = summa * summa;
       answ = abs(summakv - kvsummi);
       return answ;
+  }
+
+  int BullandCow(int choose, int guess) //не готовый вариант, переделать под возвращение какогото параметра, он будет определять будит ли
+      //функция вызвана ещё раз(соединить с сканом угадывания) 
+  {
+      int bull = 0;
+      int cow = 0;
+      for (int i = 0; i <= 3; i++)
+      {
+          for (int j = 0; j <= 3; j++)
+          {
+              if ((choose % (10 * j)) == (guess % (10 * i)))
+                  if (i == j)
+                  {
+                      bull++;
+                  }
+                  else
+                  {
+                      cow++;
+                  }
+          }
+      }
+
+      printf("коров: %i быков:%i", bull, cow);
+      return 0;
+
   }
