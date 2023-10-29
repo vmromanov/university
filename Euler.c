@@ -157,7 +157,7 @@ int Reversed(const int number_)
           scanf_s("%u", &guess3);
           printf("\nfourth num guess: ");
           scanf_s("%u", &guess4);
-
+        
           if (guess1==(num1)||(num2)||(num3)||(num4))
               if (guess1 == num1)
               {
@@ -204,5 +204,6 @@ int Reversed(const int number_)
           }
           
       } while (cows != 0);
+      
       return rez;
   }
