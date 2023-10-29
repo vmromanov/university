@@ -56,21 +56,23 @@ int main()
 	//scanf_s("%i", &amount);
 	//printf("answer = %i\n", Problem6(amount));
 
-	  //bullsandcows
+	  //bulls_and_Cows
 
-	unsigned int choose = 0;
-	unsigned int guess = 0;
-	printf("загаданное число : ");
-	scanf_s("%i\n", &choose);
-	printf("ваш предпологаемый ответ :");
-	scanf_s("%i\n", &guess);
-	//переделать под повторяющийся скан угадывания
-	int help = 0;
-	do
-	{
-		BulandCow(choose, guess);
-		help++;
-	} while (help = 0);
+	unsigned int num1 = 0;
+	unsigned int num2 = 0;
+	unsigned int num3 = 0;
+	unsigned int num4 = 0;
+	printf("first num: ");
+	scanf_s("%u", &num1);
+	printf("\nsecond num: ");
+	scanf_s("%u", &num2);
+	printf("\nthird num: ");
+	scanf_s("%u", &num3);
+	printf("\nfourth num: ");
+	scanf_s("%u", &num4);
+	printf("\n");
+	
+	printf("u guessed num : %u", BullandCow(num1, num2, num3, num4));
 
    return 0;
 }

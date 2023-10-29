@@ -136,28 +136,73 @@ int Reversed(const int number_)
       return answ;
   }
 
-  int BullandCow(int choose, int guess) //не готовый вариант, переделать под возвращение какогото параметра, он будет определять будит ли
-      //функция вызвана ещё раз(соединить с сканом угадывания) доделать в субботу.
+  int BullandCow(int num1, int num2, int num3, int num4)
   {
-      int bull = 0;
-      int cow = 0;
-      for (int i = 0; i <= 3; i++)
+      int rez = 0;
+      int bulls = 0;
+      int cows = 0;
+      unsigned int guess1 = 0;
+      unsigned int guess2 = 0;
+      unsigned int guess3 = 0;
+      unsigned int guess4 = 0;
+      do
       {
-          for (int j = 0; j <= 3; j++)
+          bulls = 0;
+          cows = 0;
+          printf("first num quess: ");
+          scanf_s("%u", &guess1);
+          printf("\nsecond num guess: ");
+          scanf_s("%u", &guess2);
+          printf("\nthird num guess: ");
+          scanf_s("%u", &guess3);
+          printf("\nfourth num guess: ");
+          scanf_s("%u", &guess4);
+
+          if (guess1==(num1)||(num2)||(num3)||(num4))
+              if (guess1 == num1)
+              {
+                  bulls++;
+              }
+              else
+              {
+                  cows++;
+              }
+          if (guess2 == (num1) || (num2) || (num3) || (num4))
+              if (guess2 == num2)
+              {
+                  bulls++;
+              }
+              else
+              {
+                  cows++;
+              }
+          if (guess3 == (num1) || (num2) || (num3) || (num4))
+              if (guess3 == num3)
+              {
+                  bulls++;
+              }
+              else
+              {
+                  cows++;
+              }
+          if (guess4 == (num1) || (num2) || (num3) || (num4))
+              if (guess4 == num4)
+              {
+                  bulls++;
+              }
+              else
+              {
+                  cows++;
+              }
+          if (bulls == 4)
           {
-              if ((choose % (10 * j)) == (guess % (10 * i)))
-                  if (i == j)
-                  {
-                      bull++;
-                  }
-                  else
-                  {
-                      cow++;
-                  }
+               rez = guess1 * 1000 + guess2 * 100 + guess3 * 10 + guess4;
           }
-      }
-
-      printf("коров: %i быков:%i", bull, cow);
-      return 0;
-
+          else
+          {
+              printf("cows :%d bulls:%d\n", cows, bulls);
+          }
+          
+      } while (cows != 0);
+      return rez;
   }
