@@ -203,7 +203,7 @@ int Reversed(const int number_)
               printf("cows :%d bulls:%d\n", cows, bulls);
           }
           
-      } while (cows != 0);
+      } while (bulls != 4);
       
       return rez;
   }
