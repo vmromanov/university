@@ -71,13 +71,33 @@ int main()
 	printf("\nfourth num: ");
 	scanf_s("%u", &num4);
 	printf("\n");
-	if ((num1) || (num2) || (num3) || (num3) > 9)
+	if (num1 > 9)
 	{
 		printf("ERROR, nums can be from 0 to 9");
 	}
 	else
 	{
-		printf("u guessed num : %u", BullandCow(num1, num2, num3, num4));
+		if (num2 > 9)
+		{
+			printf("ERROR, nums can be from 0 to 9");
+		}
+		else
+		{
+			if (num3 > 9)
+			{
+				printf("ERROR, nums can be from 0 to 9");
+			}
+			else {
+				if (num4 > 9)
+				{
+					printf("ERROR, nums can be from 0 to 9");
+				}
+				else
+				{
+					printf("u guessed num : %u", BullandCow(num1, num2, num3, num4));
+				}
+			}
+		}
 	}
    return 0;
 }

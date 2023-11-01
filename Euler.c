@@ -158,7 +158,7 @@ int Reversed(const int number_)
           printf("\nfourth num guess: ");
           scanf_s("%u", &guess4);
         
-          if (guess1==(num1)||(num2)||(num3)||(num4))
+          if (guess1== (((num1) || (num2)) || ((num3) || (num4))))
               if (guess1 == num1)
               {
                   bulls++;
@@ -167,7 +167,7 @@ int Reversed(const int number_)
               {
                   cows++;
               }
-          if (guess2 == (num1) || (num2) || (num3) || (num4))
+          if (guess2 == (((num1) || (num2)) || ((num3) || (num4))))
               if (guess2 == num2)
               {
                   bulls++;
@@ -176,7 +176,7 @@ int Reversed(const int number_)
               {
                   cows++;
               }
-          if (guess3 == (num1) || (num2) || (num3) || (num4))
+          if (guess3 == (((num1) || (num2)) || ((num3) || (num4))))
               if (guess3 == num3)
               {
                   bulls++;
@@ -185,7 +185,7 @@ int Reversed(const int number_)
               {
                   cows++;
               }
-          if (guess4 == (num1) || (num2) || (num3) || (num4))
+          if (guess4 == (((num1) || (num2)) || ((num3) || (num4))))
               if (guess4 == num4)
               {
                   bulls++;
