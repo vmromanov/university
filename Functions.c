@@ -1,5 +1,7 @@
 #include "Functions.h"
 #include <stdbool.h>
+#include <math.h>
+
 unsigned long long Square(const long long value_)
 {
    return value_ * value_;
@@ -17,3 +19,4 @@ bool Prime(unsigned long long int x)
 	}
 	return true;
 }
+

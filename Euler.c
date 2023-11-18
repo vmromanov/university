@@ -3,7 +3,6 @@
 #include "Functions.h"
 
 
-
 unsigned long long Problem_1(const unsigned int number_,
    const unsigned int* multiples_,
    const unsigned int size_)

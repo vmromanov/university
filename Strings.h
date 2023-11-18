@@ -18,13 +18,22 @@
 */
 unsigned int my_strlen(const char* str_);
 
+/**
+ * @brief вставляет строку 
+ * @param to 
+ * @param from 
+ * @return 
+*/
+char* my_strcpy(char* to, char* from);
 
 
 /**
- * @brief вставляет одну строку в другую
- * @param here куда вставляют
- * @param from откуда вставляют
- * @return строку со вставленной строкой
+ * @brief приписывает строку другой строке
+ * @param to куда приписывает
+ * @param from что приписывает
+ * @return 
 */
-char* my_strcpy(char* here, char* from);
+char* my_strcat(char* to, const char* from);
+
+
 

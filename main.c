@@ -1,5 +1,6 @@
 ﻿#include <stdio.h>
 #include "Euler.h"
+#include "Strings.h"
 #define SIZE 2 
 
 int main()
@@ -17,13 +18,14 @@ int main()
          scanf_s("%du", &multiplies[i]);
 	   printf("%llu", Problem_1(number, multiplies, SIZE));*/
 //euler 2
+ 
    //unsigned int number = 0;    
    //printf("number =");
    //scanf_s("%du", &number);
    //printf("%llu", Problem_2(number));
 
     //euler 3
-	/*unsigned*/
+	
 	/*long long value_ = 0;
 	printf("value = ");
 	scanf_s("%llu", &value_);
@@ -58,52 +60,70 @@ int main()
 
 	  //bulls_and_Cows
 
-	unsigned int num1 = 0;
-	unsigned int num2 = 0;
-	unsigned int num3 = 0;
-	unsigned int num4 = 0;
-	printf("first num: ");
-	scanf_s("%u", &num1);
-	printf("\nsecond num: ");
-	scanf_s("%u", &num2);
-	printf("\nthird num: ");
-	scanf_s("%u", &num3);
-	printf("\nfourth num: ");
-	scanf_s("%u", &num4);
-	printf("\n");
-	if (num1 > 9)
-	{
-		printf("ERROR, nums can be from 0 to 9");
-	}
-	else
-	{
-		if (num2 > 9)
-		{
-			printf("ERROR, nums can be from 0 to 9");
-		}
-		else
-		{
-			if (num3 > 9)
-			{
-				printf("ERROR, nums can be from 0 to 9");
-			}
-			else {
-				if (num4 > 9)
-				{
-					printf("ERROR, nums can be from 0 to 9");
-				}
-				else
-				{
-					printf("u guessed num : %u", BullandCow(num1, num2, num3, num4));
-				}
-			}
-		}
-	}
-   return 0;
+	//unsigned int num1 = 0;
+	//unsigned int num2 = 0;
+	//unsigned int num3 = 0;
+	//unsigned int num4 = 0;
+	//printf("first num: ");
+	//scanf_s("%u", &num1);
+	//printf("\nsecond num: ");
+	//scanf_s("%u", &num2);
+	//printf("\nthird num: ");
+	//scanf_s("%u", &num3);
+	//printf("\nfourth num: ");
+	//scanf_s("%u", &num4);
+	//printf("\n");
+	//if (num1 > 9)
+	//{
+	//	printf("ERROR, nums can be from 0 to 9");
+	//}
+	//else
+	//{
+	//	if (num2 > 9)
+	//	{
+	//		printf("ERROR, nums can be from 0 to 9");
+	//	}
+	//	else
+	//	{
+	//		if (num3 > 9)
+	//		{
+	//			printf("ERROR, nums can be from 0 to 9");
+	//		}
+	//		else {
+	//			if (num4 > 9)
+	//			{
+	//				printf("ERROR, nums can be from 0 to 9");
+	//			}
+	//			else
+	//			{
+	//				printf("u guessed num : %u", BullandCow(num1, num2, num3, num4));
+	//			}
+	//		}
+	//	}
+	//}
+
+	//my_strlen chek
+
+	/*char* str = "123456";
+	printf("%d", my_strlen(str) );
+
+   */
+
+   // my_strcpy chek
+
+//char a[] = "abcde";
+//char b[] = "1a34";
+//printf(my_strcpy(a, b));
+
+   //my_strcat chek
+
+//char a[100] = "12345";
+//char b[] = "6789";
+//printf(my_strcat(a, b));
+
+
+return 0;
 }
-
-
-
 
 
 
