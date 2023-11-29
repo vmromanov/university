@@ -1,4 +1,4 @@
-#include "Functions.h"
+﻿#include "Functions.h"
 #include <stdbool.h>
 #include <math.h>
 
@@ -20,3 +20,32 @@ bool Prime(unsigned long long int x)
 	return true;
 }
 
+int Vzaim_simpl(int a, int b)
+{
+	if (b == 0) return a;  //НОД алгоритмом евклида
+	return Vzaim_simpl(b, a % b);
+}
+
+
+int Simpl(int a)
+{
+	unsigned int c = 0;
+	for (int i = 2; i * 2 <= a; i++)
+		if (a % i == 0) { c++; };
+	if (c == 0) {
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+
+}
+
+ int Euler_func(unsigned int a)
+{
+	unsigned int amount = 0;
+	for (unsigned int i = 0; i <= a; i++)
+		if (Vzaim_simpl(i, a) == 1) amount++;
+	return amount;
+}
