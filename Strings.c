@@ -48,6 +48,90 @@ char* my_strcat(char* to, const char* from)
    return to;
 }
 
+char* my_strstr(const char* where, const char* what)
+{
+
+   int counter = 0;
+   char save[255]={0};
+   unsigned int i, j;
+   if (!where || !what)
+      return NULL;
+   for (i = 0; where[i]!='\0'; i++)
+   {
+      int flag = 1;
+      if (where[i] == what[0])
+      {
+         
+         for (j = 0; what[j] != '\0'; j++)
+         {
+            if (where[i + j] != what[j])
+             flag = 0;
+         }
+         if (flag == 1) {
+
+            for (int o = i; where[o] != '\0'; o++)
+            {
+               save[counter] = where[o];
+               counter++;
+            }
+            return save;
+         }
+      }
+      
+   }
+   return 0;
+ 
+}
+////разобратся с выводом
+
+
+int my_strcmp(const char* s1, const char* s2)
+{
+   int s1_len = my_strlen(s1);
+   int s2_len = my_strlen(s2);
+   for (int i = 0; i < s1_len; i++)
+   {
+      if (s1[i] != s2[i])
+      {
+         if (s1[i] - s2[i] < 0)
+         {
+            return -1;
+         }
+         else
+         {
+            return 1;
+         }
+      }
+   }
+   if (s1_len != s2_len)
+      if (s1_len - s2_len < 0)
+      {
+         return -1;
+      }
+      else
+      {
+         return 1;
+      }
+   else
+   {
+      return 0;
+   }
+}
+
+
+char* f_getline(int linelength ,FILE* f)
+{
+   while (fgetc(f) != EOF || fgetc(f) != '\n')
+   {
+      linelength++;
+   }
+   char* res = malloc(linelength * sizeof(char) + 1);
+
+
+
+}
+
+
 
 
 

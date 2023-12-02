@@ -1,6 +1,6 @@
-﻿#include "Functions.h"
-#include <stdbool.h>
+﻿#include <stdbool.h>
 #include <math.h>
+#include "Functions.h"
 
 unsigned long long Square(const long long value_)
 {
