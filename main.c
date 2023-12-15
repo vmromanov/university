@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "Strings.h"
 #include "Functions.h"
+#include "module2.h"
 #define SIZE 2 
 
 int main()
@@ -125,20 +126,50 @@ int main()
 
 // getline
 
-FILE* input;
-errno_t err = fopen_s(&input, "test.txt", "r");
-if (err)
-{
-	perror("test.txt");
-	return 1;
-}
+//FILE* input;
+//errno_t err = fopen_s(&input, "test.txt", "r");
+//if (err)
+//{
+//	perror("test.txt");
+//	return 1;
+//}
+//
+//
+//
+//
+//
+//
+//fclose(input);
+
+
+
+///////module 2 
+
+char str[50];
+char simb;
+printf("vvedi stroku:");
+fgets(str, sizeof(str), stdin);
+
+printf("vvedi simvol:");
+
+scanf_s("%c", &simb, 2);
+
+remfirstsimb(str, simb);
+printf("%s", str);
 
 
 
 
 
 
-fclose(input);
+
+
+
+
+
+
+
+
 
 return 0;
 }
