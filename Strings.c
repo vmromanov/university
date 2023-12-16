@@ -119,19 +119,19 @@ int my_strcmp(const char* s1, const char* s2)
 }
 
 
-char* f_getline(int linelength ,FILE* f)
-{
-   while (fgetc(f) != EOF || fgetc(f) != '\n')
-   {
-      linelength++;
-   }
-   char* res = malloc(linelength * sizeof(char) + 1);
-
-
-   
-}
-
-
+//char* f_getline(int linelength ,FILE* f)
+//{
+//   while (fgetc(f) != EOF || fgetc(f) != '\n')
+//   {
+//      linelength++;
+//   }
+//   char* res = malloc(linelength * sizeof(char) + 1);
+//
+//
+//   
+//}
+//
+//
 
 
 

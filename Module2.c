@@ -4,14 +4,19 @@
 #include "Strings.h"
 #include "Strings.h"
 
-typedef struct {
+typedef struct employee {
     char surname[100];
     char position[100];
     char contractStartDate[100];
     int contractDuration;
     float salary;
 } Employee;
-
+typedef struct currentTime
+{
+   unsigned int currentYear;
+   unsigned int currentMonth;
+   unsigned int currentday;
+} nowtime;
 
 
 void remfirstsimb(char* str, char simb)
@@ -40,17 +45,18 @@ void remfirstsimb(char* str, char simb)
 
 /////задание 2
 
-int isContractExpired(const char* contractDate) {
-    time_t currentTime = time(NULL);
-    struct tm* date = localtime_s(&currentTime);
-    int currentDay = date->tm_mday;
-    int currentMonth = date->tm_mon + 1; 
-    int currentYear = date->tm_year + 1900; 
+int isContractExpired(const char* contractDate) 
+{
+  
+   int currentDay = 16;     //
+   int currentYear = 2023;  //на момент написания в классе
+   int currentMonth = 12;   //
 
     int day, month, year;
     sscanf_s(contractDate, "%d.%d.%d", &day, &month, &year);
 
-    if (year < currentYear) {
+    if (year < currentYear) 
+    {
         return 1; 
     }
     else 
@@ -58,11 +64,13 @@ int isContractExpired(const char* contractDate) {
     {
         return 1; 
     }
-    else if (year == currentYear && month == currentMonth && day <= currentDay + 5) {
+    else 
+       if (year == currentYear && month == currentMonth && day <= currentDay + 5) 
+        {
         return 1; 
-    }
+        }
 
-    return 0; // Contract is not expired
+    return 0;
 }
 
 

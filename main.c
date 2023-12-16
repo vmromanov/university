@@ -6,6 +6,14 @@
 #include "module2.h"
 #define SIZE 2 
 
+typedef struct employee {
+	char surname[100];
+	char position[100];
+	char contractStartDate[100];
+	int contractDuration;
+	float salary;
+} Employee;
+
 int main()
 {
 //euler 1
@@ -143,19 +151,48 @@ int main()
 
 
 
-///////module 2 
+///////module 2 . №1
 
-char str[50];
-char simb;
-printf("vvedi stroku:");
-fgets(str, sizeof(str), stdin);
+//char str[50];
+//char simb;
+//printf("vvedi stroku:");
+//fgets(str, sizeof(str), stdin);
+//
+//printf("vvedi simvol:");
+//
+//scanf_s("%c", &simb, 2);
+//
+//remfirstsimb(str, simb);
+//printf("%s", str);
 
-printf("vvedi simvol:");
+///////module 2.№2
 
-scanf_s("%c", &simb, 2);
+FILE* file = NULL;
+fopen_s(&file, "Module2.txt", "r");
+if (!file)
+{
+	printf("can't open file");
+	return -1;
+}
+FILE* outfile = NULL;
+fopen_s(&outfile, "Module2/2out", "w");
+if (!outfile)
+{
+	printf("can't create out_file");
+	fclose(file);
+	return -1;
+}
 
-remfirstsimb(str, simb);
-printf("%s", str);
+struct employee Employee;
+
+while (fscanf_s(file, "%[^,],%[^,],%[^,],%d,%f",Employee.surname,Employee.position,Employee.contractStartDate,&Employee.contractDuration,&Employee.salary) != EOF)
+{
+
+
+}
+
+
+
 
 
 
