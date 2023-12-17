@@ -3,6 +3,8 @@
 #include <time.h>
 #include "Strings.h"
 #include "Strings.h"
+#include "Functions.h"
+
 
 typedef struct employee {
     char surname[100];
@@ -11,12 +13,12 @@ typedef struct employee {
     int contractDuration;
     float salary;
 } Employee;
-typedef struct currentTime
+typedef struct Time
 {
    unsigned int currentYear;
    unsigned int currentMonth;
    unsigned int currentday;
-} nowtime;
+} contractTime;
 
 
 void remfirstsimb(char* str, char simb)
@@ -45,27 +47,54 @@ void remfirstsimb(char* str, char simb)
 
 /////задание 2
 
-int isContractExpired(const char* contractDate) 
+int isContractExpired(const char* contractDate, const int duration) 
 {
   
-   int currentDay = 16;     //
+   int currentDay = 16;     
    int currentYear = 2023;  //на момент написания в классе
-   int currentMonth = 12;   //
+   int currentMonth = 12;   
 
-    int day, month, year;
-    sscanf_s(contractDate, "%d.%d.%d", &day, &month, &year);
+   char day[2];
+   char month[2];
+   char year[5];
 
-    if (year < currentYear) 
+   sscanf_s(contractDate, "%2[^.].%2[^.].%4s", day, (unsigned int)sizeof(day), month, (unsigned int)sizeof(month), year, (unsigned int)sizeof(year));
+
+   int dayi, monthi, yeari;
+   dayi = atoi(day);
+   monthi = atoi(month);
+   yeari = atoi(year);
+
+    if (duration > 30)
+    {
+        int saved = duration;
+        dayi += saved;
+      
+       if (dayi > 30)
+       {
+           monthi += dayi/30; 
+           dayi = dayi%30; 
+       }
+       int savem = monthi; 
+       if (monthi > 12) 
+       {
+           yeari += savem / 12;   
+           monthi = savem % 12;      
+       }
+
+    }
+
+    if (yeari < currentYear) 
     {
         return 1; 
     }
     else 
-    if (year == currentYear && month < currentMonth) 
+    if (yeari == currentYear && monthi < currentMonth) 
     {
         return 1; 
     }
     else 
-       if (year == currentYear && month == currentMonth && day <= currentDay + 5) 
+       if (yeari == currentYear && monthi == currentMonth && dayi <= currentDay + 5) 
         {
         return 1; 
         }

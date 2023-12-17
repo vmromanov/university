@@ -49,3 +49,10 @@ int Simpl(int a)
 		if (Vzaim_simpl(i, a) == 1) amount++;
 	return amount;
 }
+
+ int charToInt(const char* str) {
+	 int number = 0;
+	 for (int i = 0; str[i]; i++)
+		 number = number * 10 + str[i] - '0';
+	 return number;
+ }

@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+﻿#include <stdio.h> 
 #include "Euler.h"
 #include <stdlib.h>
 #include "Strings.h"
@@ -14,8 +14,15 @@ typedef struct employee {
 	float salary;
 } Employee;
 
+
+
+
+
+	
+
 int main()
 {
+	
 //euler 1
      
  /*     unsigned int number = 0;   
@@ -167,29 +174,34 @@ int main()
 
 ///////module 2.№2
 
-FILE* file = NULL;
-fopen_s(&file, "Module2.txt", "r");
-if (!file)
+FILE* file = NULL; 
+errno_t err; 
+err = fopen_s(&file, "Module2.txt", "r"); 
+if (err != 0) 
 {
-	printf("can't open file");
-	return -1;
-}
-FILE* outfile = NULL;
-fopen_s(&outfile, "Module2/2out", "w");
-if (!outfile)
-{
-	printf("can't create out_file");
-	fclose(file);
+	perror("fopen_s"); 
 	return -1;
 }
 
-struct employee Employee;
 
-while (fscanf_s(file, "%[^,],%[^,],%[^,],%d,%f",Employee.surname,Employee.position,Employee.contractStartDate,&Employee.contractDuration,&Employee.salary) != EOF)
+struct employee Employee[5];
+
+for (int i=0; fscanf_s(file, "%[^,],%[^,],%[^,],%d,%f", Employee[i].surname, (unsigned)_countof(Employee[i].surname),
+	Employee[i].position, (unsigned)_countof(Employee[i].position),
+	Employee[i].contractStartDate, (unsigned)_countof(Employee[i].contractStartDate),
+	&Employee[i].contractDuration, &Employee[i].salary) != EOF;i++)
 {
-
-
+	if (isContractExpired(Employee[i].contractStartDate,Employee[i].contractDuration))
+	{
+		printf_s( "Name: %s\n", Employee[i].surname);
+		printf_s("Position: %s\n", Employee[i].position);
+		printf_s( "Contract Date: %s\n", Employee[i].contractStartDate);
+		printf_s( "Contract Duration: %d\n", Employee[i].contractDuration);
+		printf_s( "Salary: %.2f\n", Employee[i].salary);
+	}
 }
+
+fclose(file); 
 
 
 

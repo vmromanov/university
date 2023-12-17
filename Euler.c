@@ -133,7 +133,7 @@ int Reversed(const int number_)
       return answ;
   }
 
-  int BullandCow(int num1, int num2, int num3, int num4)
+  /* int BullandCow(int num1, int num2, int num3, int num4)
   {
       int rez = 0;
       int bulls = 0;
@@ -147,7 +147,7 @@ int Reversed(const int number_)
           cows = 0;
           for (unsigned int i = 0; i < 4; i++)
           {
-              printf("\n угадайте %u -тое число \n", i + 1);
+              printf("угадайте %u -тое число \n", i + 1);
               scanf_s("%d", &guess[i]);
           }
 
@@ -210,5 +210,5 @@ int Reversed(const int number_)
 
       } while (bulls != 4);
   
-      return rez;
-  }
+      return rez; 
+  }*/
